@@ -5,13 +5,15 @@ import android.view.accessibility.AccessibilityNodeInfo;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.util.List;
+
 public class Response {
     @SerializedName("coord")
     @Expose
     Coord coord;
     @SerializedName("weather")
     @Expose
-    Weather weather;
+    List<Weather> weather;
     @SerializedName("base")
     @Expose
     String base;
@@ -50,7 +52,7 @@ public class Response {
         return coord;
     }
 
-    public Weather getWeather() {
+    public List<Weather> getWeather() {
         return weather;
     }
 
